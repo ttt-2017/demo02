@@ -1,4 +1,4 @@
-package demo01;
+package demo01.jiahua;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
