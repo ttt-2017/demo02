@@ -8,4 +8,9 @@ Ring 第二次测试　
 
 也就比你大两岁
 
-hello world
+伟
+public 
+{
+    
+}
+fansy
