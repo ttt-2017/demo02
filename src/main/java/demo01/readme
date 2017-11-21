@@ -1,0 +1,9 @@
+demo01 下面建立 各自的文件夹：
+
+demo01.fansy:
+        --db
+        --service
+        --model
+            User (age , name ,id )
+
+        --test
