@@ -12,11 +12,11 @@ public class Test {
     public static void main(String[] args) throws SQLException {
         Connection conn= DBUtils.getConn();
         //增加数据
-       //User u=new User();
-        //u.setId(1);
-        //u.setName("mark");
-       // u.setAge(24);
-      // new UserService().addUser(u);
+       User u=new User();
+        u.setId(1);
+        u.setName("mark");
+        u.setAge(24);
+       new UserService().addUser(u);
         //User u1=new User();
         //u1.setId(2);
         //u1.setName("jhon");
@@ -33,10 +33,10 @@ public class Test {
            // System.out.println("id:"+u.getId()+"\t"+"name:"+u.getName()+"\t"+"age:"+u.getAge());
        // }
         //更新数据
-        User u=new User();
-        u.setId(1);
-        u.setName("betty");
-        u.setAge(23);
-        new UserService().updateUser(u);
+//        User u=new User();
+//        u.setId(1);
+//        u.setName("betty");
+//        u.setAge(23);
+//        new UserService().updateUser(u);
         }
 }

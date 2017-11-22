@@ -68,7 +68,6 @@ public class UserService {
             u.setAge(rs.getInt("age"));
         }
         return u;
-
     }
 
 }
