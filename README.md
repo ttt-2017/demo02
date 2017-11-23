@@ -1,16 +1,12 @@
 # demo02
 
-Ring 第二次测试　
+任务记录：
+1. github提交／冲突／下载／更新
+   done；
 
-张金锋
+2. logbak 日志
+   done;
 
-都修改下这个文件试试 -fansy
+3. jdbc数据库
 
-也就比你大两岁
-
-伟
-public 
-{
-    
-}
-fansy
+4. 第一个web工程及tomcat 部署
