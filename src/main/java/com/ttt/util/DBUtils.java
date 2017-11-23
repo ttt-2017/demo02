@@ -18,4 +18,12 @@ public class DBUtils {
         // TODO
         return null ;
     }
+
+    private static void  init(){
+        // 往给定的数据库里面插入测试数据
+
+    }
+    public static void main(String[] args){
+        init();
+    }
 }
