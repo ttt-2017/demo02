@@ -45,6 +45,10 @@
           <artifactId>logback-core</artifactId>
           <version>${logback.version}</version>
       </dependency>
-
+      <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+          <version>5.1.21</version>
+      </dependency>
   </dependencies>
 </project>

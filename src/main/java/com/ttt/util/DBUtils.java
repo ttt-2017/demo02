@@ -1,6 +1,11 @@
 package com.ttt.util;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.LinkedHashMap;
+import java.util.Properties;
 
 /**
  * TODO : jiahua
@@ -9,14 +14,27 @@ import java.sql.Connection;
  */
 public class DBUtils {
     private static final String jdbc_properties = "jdbc.properties";
-
+    private static Connection mysqlConn = null;
     /**
      * 获取JDBC连接
      * @return
      */
     public static Connection getConnection(){
-        // TODO
-        return null ;
+        LinkedHashMap<String,String> properties = PropertiesUtils.getProperties(jdbc_properties);
+        if(mysqlConn==null){
+            try{
+                Class.forName(properties.get("jdbc.driver"));
+                System.out.println("Connecting to database...");
+                mysqlConn = DriverManager.getConnection(properties.get("jdbc.url"), properties.get("jdbc.username"), properties.get("jdbc.password"));
+                System.out.println("connecting to database sucessfully");
+            }catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("can not to connecting to database");
+            }
+            return mysqlConn;
+        }else {
+            return mysqlConn;
+        }
     }
 
     private static void  init(){
@@ -24,6 +42,8 @@ public class DBUtils {
 
     }
     public static void main(String[] args){
-        init();
+//        init();
+       getConnection();
     }
+
 }
