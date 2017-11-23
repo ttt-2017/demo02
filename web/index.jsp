@@ -13,5 +13,7 @@
   <body>
   $END$
   <a href="demo">hit me </a>
+
+  <input type="text" name="username"/>
   </body>
 </html>

@@ -13,6 +13,7 @@ public class DemoServlet extends javax.servlet.http.HttpServlet {
     }
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+        request.getParameter("username");
         doPost(request,response);
     }
 }
