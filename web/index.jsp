@@ -11,7 +11,7 @@
     <title>用户信息查询界面</title>
   </head>
   <body>
-    <form action="" method="post">
+    <form action="Check" method="post">
       <table width="200" border="0" cellpadding="10" cellspacing="0" align="center">
         <tr>
           <td><label>ID:</label></td>
