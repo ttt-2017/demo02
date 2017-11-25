@@ -14,6 +14,8 @@ public interface UserDAO {
 
     public boolean updateUser(User user);
 
-    public boolean getUserByName(String name);
+    public User getUserByName(String name);
+
+    //public User getUserByName(String name);
 
 }
