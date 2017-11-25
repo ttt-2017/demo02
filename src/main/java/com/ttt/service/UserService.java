@@ -16,7 +16,7 @@ public interface UserService {
 
     public boolean updateUser(User user);
 
-    public ResultSet getUserByName(String name);
+    //public ResultSet getUserByName(String name);
 
-//    public User getUserByName(String name);
+    public User getUserByName(String name);
 }

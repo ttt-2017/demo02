@@ -2,8 +2,6 @@ package com.ttt.dao;
 
 import com.ttt.model.User;
 
-import java.sql.ResultSet;
-
 /**
  * Created by fanzhe on 2017/11/23.
  */
@@ -16,7 +14,7 @@ public interface UserDAO {
 
     public boolean updateUser(User user);
 
-    public ResultSet getUserByName(String name);
+    public User getUserByName(String name);
 
     //public User getUserByName(String name);
 

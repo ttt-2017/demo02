@@ -96,7 +96,8 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    //返回resultSet，避免user重名报错
+    //返回resultSet，避免user重名报错，注意此方法没有关闭连接connaction ，rs，pstmt
+    /**
     public ResultSet getUserByName(String name) {
         String sql = "select * from user where name = ?";
         PreparedStatement pstmt;
@@ -113,9 +114,9 @@ public class UserDAOImpl implements UserDAO {
         }
         return rs;
     }
+    **/
+    //建议用此方法，返回user
 
-    //备用，返回user
-    /**
     public User getUserByName(String name) {
         String sql = "select * from user where name = ?";
         PreparedStatement pstmt;
@@ -126,12 +127,13 @@ public class UserDAOImpl implements UserDAO {
             pstmt.setString(1,name);
             rs = pstmt.executeQuery();
             int col = rs.getMetaData().getColumnCount();
-
-            for (int i = 1; i <= col; i++) {
-                user.setId(rs.getInt(0));
-                user.setName(rs.getString(1));
-                user.setAge(rs.getInt(2));
+            if(rs.next()) {
+                for (int i = 1; i <= col; i++) {
+                    user.setId(rs.getInt(1));
+                    user.setName(rs.getString(2));
+                    user.setAge(rs.getInt(3));
                 }
+            }
             rs.close();
             pstmt.close();
             connection.close();
@@ -141,5 +143,5 @@ public class UserDAOImpl implements UserDAO {
 
         return user;
     }
-    **/
+
 }

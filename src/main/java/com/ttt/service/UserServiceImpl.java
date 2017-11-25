@@ -39,11 +39,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ResultSet getUserByName(String name) {
-        return this.userDAO.getUserByName(name);
-    }
-
-//    public User getUserByName(String name) {
+//    public ResultSet getUserByName(String name) {
 //        return this.userDAO.getUserByName(name);
 //    }
+
+    public User getUserByName(String name) {
+        return this.userDAO.getUserByName(name);
+    }
 }
