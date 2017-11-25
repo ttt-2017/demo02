@@ -11,9 +11,14 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
-  <a href="demo">hit me </a>
+    <form action="servlet/DemoServlet" method="post">
+      <input type="text" placeholder="请输入要查询的用户id" name="id" ><br/><br/>
+      <input type="text" placeholder="请输入要查询的用户名" name="name"/><br/><br/>
+      <input type="text" placeholder="请输入用户的年龄" name="age"><br/><br/>
+      <input type="submit" value="提交"/>
+    </form>
 
-  <input type="text" name="username"/>
+     <!-- <a href="demo">hit me</a>-->
+
   </body>
 </html>

@@ -8,8 +8,9 @@
         <servlet-name>DemoServlet</servlet-name>
         <servlet-class>com.ttt.servlet.DemoServlet</servlet-class>
     </servlet>
-    <servlet-mapping>
+   <servlet-mapping>
         <servlet-name>DemoServlet</servlet-name>
-        <url-pattern>/demo</url-pattern>
+        <url-pattern>/servlet/DemoServlet</url-pattern>
     </servlet-mapping>
+
 </web-app>
