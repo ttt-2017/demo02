@@ -12,5 +12,8 @@
         <servlet-name>DemoServlet</servlet-name>
         <url-pattern>/servlet/DemoServlet</url-pattern>
     </servlet-mapping>
-
+    <servlet-mapping>
+        <servlet-name>DemoServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 </web-app>

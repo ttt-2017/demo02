@@ -8,17 +8,27 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>用户信息查询界面</title>
   </head>
   <body>
-    <form action="servlet/DemoServlet" method="post">
-      <input type="text" placeholder="请输入要查询的用户id" name="id" ><br/><br/>
-      <input type="text" placeholder="请输入要查询的用户名" name="name"/><br/><br/>
-      <input type="text" placeholder="请输入用户的年龄" name="age"><br/><br/>
-      <input type="submit" value="提交"/>
+    <form action="" method="post">
+      <table width="200" border="0" cellpadding="10" cellspacing="0" align="center">
+        <tr>
+          <td><label>ID:</label></td>
+          <td><input type="text" placeholder="请输入要查询的用户id" name="id" ></td>
+        </tr>
+        <tr>
+          <td><label>Name:</label></td>
+          <td><input type="text" placeholder="请输入要查询的用户名" name="name"/></td>
+        </tr>
+        <tr>
+          <td><label>Age:</label></td>
+          <td><input type="text" placeholder="请输入用户的年龄" name="age"></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center"><input type="submit" value="提交"/></td>
+        </tr>
+      </table>
     </form>
-
-     <!-- <a href="demo">hit me</a>-->
-
   </body>
 </html>
