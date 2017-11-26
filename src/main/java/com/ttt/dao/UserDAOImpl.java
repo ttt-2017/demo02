@@ -14,12 +14,13 @@ import java.sql.SQLException;
 public class UserDAOImpl implements UserDAO {
     private Connection connection = null ;
 
-    public UserDAOImpl(){
+   public UserDAOImpl(){
         this.connection = DBUtils.getConnection();
     }
     public UserDAOImpl(Connection connection){
         this.connection = connection;
     }
+
     @Override
     public boolean hasUser(User user) {
         String sql = "select id,name,age from User where id = " +user.getId() + " and name = \"" + user.getName() + "\" and age = " + user.getAge() + ";";
@@ -33,6 +34,7 @@ public class UserDAOImpl implements UserDAO {
         }catch (SQLException e){
             e.printStackTrace();
         }
+
         return i;
     }
 
@@ -42,17 +44,17 @@ public class UserDAOImpl implements UserDAO {
         PreparedStatement pstmt;
         Boolean i = false;
         try {
-            pstmt = (PreparedStatement) connection.prepareStatement(sql);
+            pstmt =connection.prepareStatement(sql);
             pstmt.setInt(1, user.getId());
             pstmt.setString(2, user.getName());
             pstmt.setInt(3, user.getAge());
             i = pstmt.executeUpdate()==1;
-
             pstmt.close();
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         return i;
     }
 
@@ -62,11 +64,12 @@ public class UserDAOImpl implements UserDAO {
         PreparedStatement pstmt;
         Boolean i = false;
         try {
-            pstmt = (PreparedStatement) connection.prepareStatement(sql);
+            pstmt = connection.prepareStatement(sql);
             i = pstmt.executeUpdate()==1;
             System.out.println("resutl: " + i);
             pstmt.close();
             connection.close();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -75,20 +78,19 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public boolean updateUser(User user) {
-
         Boolean i =false;
         String sql = "update user set name=?,age=? where id=?";
         PreparedStatement pstmt;
         try {
-            pstmt = (PreparedStatement) connection.prepareStatement(sql);
+            pstmt =connection.prepareStatement(sql);
             System.out.println(sql);
             pstmt.setString(1,user.getName());
             pstmt.setInt(2,user.getAge());
             pstmt.setInt(3,user.getId());
-
             i = pstmt.executeUpdate()==1;
             pstmt.close();
             connection.close();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -97,7 +99,6 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     //返回resultSet，避免user重名报错，注意此方法没有关闭连接connaction ，rs，pstmt
-    /**
     public ResultSet getUserByName(String name) {
         String sql = "select * from user where name = ?";
         PreparedStatement pstmt;
@@ -114,16 +115,15 @@ public class UserDAOImpl implements UserDAO {
         }
         return rs;
     }
-    **/
     //建议用此方法，返回user
 
-    public User getUserByName(String name) {
+    /*public User getUserByName(String name) {
         String sql = "select * from user where name = ?";
         PreparedStatement pstmt;
-        ResultSet rs = null;
+        ResultSet rs ;
         User user = new User();
         try {
-            pstmt = (PreparedStatement)connection.prepareStatement(sql);
+            pstmt = connection.prepareStatement(sql);
             pstmt.setString(1,name);
             rs = pstmt.executeQuery();
             int col = rs.getMetaData().getColumnCount();
@@ -137,11 +137,13 @@ public class UserDAOImpl implements UserDAO {
             rs.close();
             pstmt.close();
             connection.close();
+
+
         } catch (SQLException e1) {
             e1.printStackTrace();
         }
-
         return user;
     }
+    */
 
 }

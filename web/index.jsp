@@ -1,34 +1,45 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: fanzhe
-  Date: 2017/11/23
-  Time: 下午1:43
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>用户信息查询界面</title>
+    <title>首页</title>
+    <style>
+      a{
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
-    <form action="Check" method="post">
-      <table width="200" border="0" cellpadding="10" cellspacing="0" align="center">
-        <tr>
-          <td><label>ID:</label></td>
-          <td><input type="text" placeholder="请输入要查询的用户id" name="id" ></td>
-        </tr>
-        <tr>
-          <td><label>Name:</label></td>
-          <td><input type="text" placeholder="请输入要查询的用户名" name="name"/></td>
-        </tr>
-        <tr>
-          <td><label>Age:</label></td>
-          <td><input type="text" placeholder="请输入用户的年龄" name="age"></td>
-        </tr>
-        <tr>
-          <td colspan="2" align="center"><input type="submit" value="提交"/></td>
-        </tr>
-      </table>
-    </form>
+      <div align="center">
+        <h1>
+          <b>用户信息操作系统</b>
+        </h1>
+        <br/>
+        <table>
+          <tr>
+            <td><a href="hasUser.jsp">查询用户信息</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="delUser.jsp">删除用户信息</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="addUser.jsp">添加用户信息</a></tr>
+            </td>
+          <tr>
+            <td>
+              <a href="getUser.jsp">根据用户名查询用户信息</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="updateUser.jsp">更新用户信息</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
   </body>
 </html>

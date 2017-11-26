@@ -1,12 +1,13 @@
 package com.ttt.servlet;
 import com.ttt.dao.UserDAOImpl;
 import com.ttt.model.User;
+import com.ttt.util.DBUtils;
 
 import java.io.IOException;
 /**
  * Created by fanzhe on 2017/11/23.
  */
-public class DemoServlet extends javax.servlet.http.HttpServlet {
+public class HasServlet extends javax.servlet.http.HttpServlet {
 
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         //System.out.printf("demo test ");
@@ -28,10 +29,7 @@ public class DemoServlet extends javax.servlet.http.HttpServlet {
             response.getWriter().println("id="+id+"<br/>");
             response.getWriter().println("name="+name+"<br/>");
             response.getWriter().println("age="+age+"<br/>");
-
         }
-        //doGet(request,response);
-
 
     }
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
