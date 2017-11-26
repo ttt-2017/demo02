@@ -15,10 +15,9 @@ import java.sql.SQLException;
  */
 public class HasUserTest {
     public static void main(String[] args){
-        UserService userService = new UserServiceImpl(new UserDAOImpl(testConnation.getConf()));
+       UserService userService = new UserServiceImpl(new UserDAOImpl(testConnation.getConf()));
         User user = new User(1,"Tom",13);
         boolean hasUser = userService.hasUser(user);
         System.out.println("hasUser: " + hasUser);
     }
-
 }
