@@ -23,7 +23,30 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public boolean hasUser(User user) {
-        String sql = "select id,name,age from User where id = " +user.getId() + " and name = \"" + user.getName() + "\" and age = " + user.getAge() + ";";
+        boolean flag=false;
+        String sql = "select * from user where id=? and name=? and age=?";
+        try {
+            PreparedStatement pstmt=this.connection.prepareStatement(sql);
+            pstmt.setInt(1, user.getId());
+            pstmt.setString(2,user.getName());
+            pstmt.setInt(3,user.getAge());
+            ResultSet rs=pstmt.executeQuery();
+            while(rs.next()){
+                flag=true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return flag;
+
+        /*String sql = "select id,name,age from User where id = " +user.getId() + " and name = \"" + user.getName() + "\" and age = " + user.getAge() + ";";
         PreparedStatement pstmt;
         Boolean i = false;
         try {
@@ -35,7 +58,7 @@ public class UserDAOImpl implements UserDAO {
             e.printStackTrace();
         }
 
-        return i;
+        return i;*/
     }
 
     @Override

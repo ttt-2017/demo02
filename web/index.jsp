@@ -17,7 +17,7 @@
         <br/>
         <table>
           <tr>
-            <td><a href="hasUser.jsp">查询用户信息</a></td>
+            <td><a href="hasUser.jsp">判断用户是否存在</a></td>
           </tr>
           <tr>
             <td>

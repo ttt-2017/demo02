@@ -25,7 +25,7 @@ public class HasServlet extends javax.servlet.http.HttpServlet {
         if(!new UserDAOImpl().hasUser(user)){
             response.getWriter().println("用户不存在！");
         }else{
-            response.getWriter().println("用户的信息如下所示：<br/>");
+            response.getWriter().println("存在该用户且用户信息如下所示：<br/>");
             response.getWriter().println("id="+id+"<br/>");
             response.getWriter().println("name="+name+"<br/>");
             response.getWriter().println("age="+age+"<br/>");
