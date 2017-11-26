@@ -1,9 +1,13 @@
 package com.ttt.util;
 
+import com.ttt.dao.UserDAOImpl;
+import com.ttt.model.User;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.LinkedHashMap;
 import java.util.Properties;
 
@@ -36,11 +40,22 @@ public class DBUtils {
 
     private static void  init(){
         // 往给定的数据库里面插入测试数据
-
+        User user = null;
+        Connection connection = getConnection();
+        UserDAOImpl userDAO = new UserDAOImpl(connection);
+        for(int i=0;i<10;i++){
+            user = new User(i,"zhang"+i,i);
+            userDAO.addUser(user);
+        }
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
     public static void main(String[] args){
-//        init();
-       getConnection();
+        init();
+//       getConnection();
     }
 
 }
