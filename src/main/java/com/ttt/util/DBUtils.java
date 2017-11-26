@@ -1,5 +1,8 @@
 package com.ttt.util;
 
+import com.ttt.dao.UserDAOImpl;
+import com.ttt.model.User;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
@@ -36,11 +39,16 @@ public class DBUtils {
 
     private static void  init(){
         // 往给定的数据库里面插入测试数据
-
+        User user = null;
+        UserDAOImpl userDAO = new UserDAOImpl(getConnection());
+        for(int i=0;i<10;i++){
+            user = new User(i,"zhang"+i,i);
+            userDAO.addUser(user);
+        }
     }
     public static void main(String[] args){
-//        init();
-       getConnection();
+        init();
+//       getConnection();
     }
 
 }
