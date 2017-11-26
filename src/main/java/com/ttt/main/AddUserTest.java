@@ -11,5 +11,6 @@ public class AddUserTest {
         User user = new User(4,"Tom",13);
         boolean addUser = userService.addUser(user);
         System.out.println("addUser: " + addUser);
+
     }
 }

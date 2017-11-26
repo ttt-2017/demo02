@@ -3,17 +3,45 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-
     <servlet>
-        <servlet-name>DemoServlet</servlet-name>
-        <servlet-class>com.ttt.servlet.DemoServlet</servlet-class>
+        <servlet-name>DelServlet</servlet-name>
+        <servlet-class>com.ttt.servlet.DelServlet</servlet-class>
     </servlet>
-   <servlet-mapping>
-        <servlet-name>DemoServlet</servlet-name>
-        <url-pattern>/servlet/DemoServlet</url-pattern>
-    </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>DemoServlet</servlet-name>
+        <servlet-name>DelServlet</servlet-name>
+        <url-pattern>/del</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>HasServlet</servlet-name>
+        <servlet-class>com.ttt.servlet.HasServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HasServlet</servlet-name>
         <url-pattern>/Check</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>AddServlet</servlet-name>
+        <servlet-class>com.ttt.servlet.AddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddServlet</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateServlet</servlet-name>
+        <servlet-class>com.ttt.servlet.UpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateServlet</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GetByNameServlet</servlet-name>
+        <servlet-class>com.ttt.servlet.GetByNameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetByNameServlet</servlet-name>
+        <url-pattern>/getUser</url-pattern>
+    </servlet-mapping>
+
 </web-app>

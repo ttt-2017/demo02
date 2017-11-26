@@ -1,5 +1,8 @@
 package com.ttt.util;
 
+import com.ttt.dao.UserDAOImpl;
+import com.ttt.model.User;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
@@ -21,7 +24,6 @@ public class DBUtils {
      */
     public static Connection getConnection(){
         LinkedHashMap<String,String> properties = PropertiesUtils.getProperties(jdbc_properties);
-        if(mysqlConn==null){
             try{
                 Class.forName(properties.get("jdbc.driver"));
                 System.out.println("Connecting to database...");
@@ -32,18 +34,20 @@ public class DBUtils {
                 System.out.println("can not to connecting to database");
             }
             return mysqlConn;
-        }else {
-            return mysqlConn;
-        }
+
     }
 
     private static void  init(){
         // 往给定的数据库里面插入测试数据
+        User user=new User();
+        user.setId(2);
+        user.setName("Betty");
+        user.setAge(22);
+        new UserDAOImpl().addUser(user);
 
     }
     public static void main(String[] args){
-//        init();
+       init();
        getConnection();
     }
-
 }

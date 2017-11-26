@@ -11,5 +11,6 @@ public class DeleteUserTest {
         User user = new User(4,"Tom",13);
         boolean deleteUser = userService.deleteUserById(4);
         System.out.println("deleteUser: " + deleteUser);
+        
     }
 }
