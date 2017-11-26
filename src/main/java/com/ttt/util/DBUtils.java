@@ -21,7 +21,6 @@ public class DBUtils {
      */
     public static Connection getConnection(){
         LinkedHashMap<String,String> properties = PropertiesUtils.getProperties(jdbc_properties);
-        if(mysqlConn==null){
             try{
                 Class.forName(properties.get("jdbc.driver"));
                 System.out.println("Connecting to database...");
@@ -32,9 +31,7 @@ public class DBUtils {
                 System.out.println("can not to connecting to database");
             }
             return mysqlConn;
-        }else {
-            return mysqlConn;
-        }
+
     }
 
     private static void  init(){
