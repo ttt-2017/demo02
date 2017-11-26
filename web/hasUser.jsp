@@ -12,7 +12,7 @@
 </head>
 <body>
 <form action="Check" method="post">
-  <table width="200" border="0" cellpadding="10" cellspacing="0" align="center">
+  <table border="0" cellpadding="10" cellspacing="0" align="center">
     <tr>
       <td><label>用户Id：</label></td>
       <td><input type="text" placeholder="请输入要查询的用户id" name="id" ></td>
