@@ -17,25 +17,25 @@
         <br/>
         <table>
           <tr>
-            <td><a href="hasUser.jsp">判断用户是否存在</a></td>
+            <td><a href="hasUser.jsp" target="_blank">判断用户是否存在</a></td>
           </tr>
           <tr>
             <td>
-              <a href="delUser.jsp">删除用户信息</a>
+              <a href="delUser.jsp" target="_blank">删除用户信息</a>
             </td>
           </tr>
           <tr>
             <td>
-              <a href="addUser.jsp">添加用户信息</a></tr>
+              <a href="addUser.jsp" target="_blank">添加用户信息</a></tr>
             </td>
           <tr>
             <td>
-              <a href="getUser.jsp">根据用户名查询用户信息</a>
+              <a href="getUser.jsp" target="_blank">根据用户名查询用户信息</a>
             </td>
           </tr>
           <tr>
             <td>
-              <a href="updateUser.jsp">更新用户信息</a>
+              <a href="updateUser.jsp" target="_blank">更新用户信息</a>
             </td>
           </tr>
         </table>
