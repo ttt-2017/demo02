@@ -3,7 +3,7 @@ package com.ttt.service;
 import com.ttt.dao.UserDAO;
 import com.ttt.model.User;
 
-import java.sql.ResultSet;
+import java.util.ArrayList;
 
 /**
  * Created by fanzhe on 2017/11/23.
@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-   public ResultSet getUserByName(String name) {
+   public ArrayList<User> getUserByName(String name) {
         return this.userDAO.getUserByName(name);
 }
 

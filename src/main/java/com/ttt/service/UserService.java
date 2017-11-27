@@ -2,7 +2,7 @@ package com.ttt.service;
 
 import com.ttt.model.User;
 
-import java.sql.ResultSet;
+import java.util.ArrayList;
 
 /**
  * Created by fanzhe on 2017/11/23.
@@ -16,7 +16,7 @@ public interface UserService {
 
     public boolean updateUser(User user);
 
-    public ResultSet getUserByName(String name);
+    public ArrayList<User> getUserByName(String name);
 
    // public User getUserByName(String name);
 }
