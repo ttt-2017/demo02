@@ -63,8 +63,8 @@ public class UserDAOImpl implements UserDAO {
         Boolean i = false;
         try {
             pstmt =connection.prepareStatement(sql);
-            pstmt.setString(2, user.getName());
-            pstmt.setInt(3, user.getAge());
+            pstmt.setString(1, user.getName());
+            pstmt.setInt(2, user.getAge());
             i = pstmt.executeUpdate()==1;
             pstmt.close();
         } catch (SQLException e) {
@@ -96,7 +96,7 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public boolean deleteUserByName(String name) {
-        String sql = "delete from user where name = ?";
+        String sql = "delete from user where name=?";
         PreparedStatement pstmt = null;
         Boolean i = false;
         try {
@@ -142,13 +142,13 @@ public class UserDAOImpl implements UserDAO {
     //返回resultSet，避免user重名报错
     public List<User> getUserByName(String name) {
         List<User> userList=new ArrayList<>();
-        String sql = "select * from user where name = ?";
+        String sql = "select * from user where name like ?";
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         User user = new User();
         try {
             pstmt = (PreparedStatement)connection.prepareStatement(sql);
-            pstmt.setString(1,name);
+            pstmt.setString(1,name+"%");
             rs = pstmt.executeQuery();
             while(rs.next()){
                 userList.add(new User(rs.getInt(1),rs.getString(2),rs.getInt(3)));

@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -23,13 +24,18 @@ public class GetByNameServlet extends javax.servlet.http.HttpServlet{
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charaset=UTF-8");
         String name = request.getParameter("name");
+        PrintWriter out = response.getWriter();
         List<User> userList=new UserDAOImpl().getUserByName(name);
         if(userList.size()>0) {
+            out.println("<table border=1 align='center'>");
+            out.println("<tr><td>用户Id</td><td>用户名称</td><td>用户年龄</td></tr>");
             for (User user : userList) {
-                response.getWriter().append("查询到的用户信息如下：<br/>").append("id=" + user.getId() + "<br/>").
-                        append("name=" + user.getName() + "<br/>").append("age=" + user.getAge() + "<br/>");
-
+                out.print("<tr>");
+                out.print("<td>"+user.getId()+"</td>");
+                out.print("<td>"+user.getName()+"</td>");
+                out.print("<td>"+user.getAge()+"</td>");
             }
+            out.print("</table>");
         }else{
             response.getWriter().println("用户不存在！");}
     }
