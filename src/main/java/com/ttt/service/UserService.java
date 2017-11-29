@@ -20,4 +20,7 @@ public interface UserService {
 
     public List<User> getUserByName(String name);
 
+    public User getUserById(int id);
+
+    public List<User> getUserByAge(int age);
    }
