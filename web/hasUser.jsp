@@ -1,7 +1,7 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2017/11/25
+  User: qwm
+  Date: 2017/11/29
   Time: 20:10
   To change this template use File | Settings | File Templates.
 --%>
@@ -27,10 +27,29 @@
           }
         }
       }
+      function checkForm(){
+        var idValue=document.getElementById("id").value;
+        if(idValue==null || idValue==""){
+          alert("用户Id不能为空")
+          return false
+        }
+
+        var nameValue=document.getElementById("name").value;
+        if(nameValue==null || nameValue==""){
+          alert("用户名称不能为空")
+          return false
+        }
+        var ageValue=document.getElementById("age").value;
+        if(ageValue==null || ageValue==""){
+          alert("用户年龄不能为空")
+          return false
+        }
+        return true
+      }
     </script>
 </head>
 <body>
-<form action="Check" method="post">
+<form action="Check" method="post" onsubmit="return checkForm()">
   <table border="0" cellpadding="10" cellspacing="0" align="center">
     <tr>
       <td><label>用户Id：</label></td>

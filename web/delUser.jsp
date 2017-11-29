@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Administrator
+  User: qwm
   Date: 2017/11/25
   Time: 19:45
   To change this template use File | Settings | File Templates.
@@ -20,6 +20,14 @@
           }
         }
       }
+      function checkForm(){
+        var idValue=document.getElementById("id").value;
+        if(idValue==null || idValue==""){
+          alert("用户Id不能为空")
+          return false
+        }
+        return true
+      }
     </script>
     <script>
       function delComfirm(){
@@ -29,9 +37,10 @@
           return false;
         }
       }
+
     </script>
 </head>
-    <form action="del" method="post">
+    <form action="del" method="post" onsubmit="return checkForm()">
       <table align="center">
         <tr>
           <td>请输入要删除的用户Id：</td>

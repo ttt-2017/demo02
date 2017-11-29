@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Administrator
+  User: qwm
   Date: 2017/11/25
   Time: 20:42
   To change this template use File | Settings | File Templates.
@@ -11,14 +11,6 @@
     <title>添加用户页面</title>
   <script>
     window.onload=function(){
-      <!--var inputId=document.getElementById("id")
-      inputId.onkeyup=function(){
-        var num=this.value;
-        var re=/^[0-9]*[1-9][0-9]*$/;
-        if(!re.test(num)){
-          alert("用户Id必须是Int类型！")
-        }
-      }-->
       var inputAge=document.getElementById("age");
       inputAge.onkeyup=function(){
         var re=/^[0-9]*[1-9][0-9]*$/;
@@ -28,17 +20,28 @@
       }
     }
   </script>
+  <script>
+    function checkForm(){
+      var nameValue=document.getElementById("name").value;
+      if(nameValue==null || nameValue==""){
+        alert("用户名称不能为空")
+        return false
+      }
+      var ageValue=document.getElementById("age").value;
+      if(ageValue==null || ageValue==""){
+        alert("用户年龄不能为空")
+        return false
+      }
+      return true
+    }
+  </script>
 </head>
 <body>
-    <form action="add" method="post">
+    <form action="add" method="post" onsubmit="return checkForm()">
       <table align="center">
-        <!--<tr>
-          <td>用户Id：</td>
-          <td><input type="text" placeholder="请输入新用户的id" name="id" id="id"></td>
-        </tr>-->
         <tr>
           <td>用户名称：</td>
-          <td><input type="text" placeholder="请输入新用户的名称" name="name"></td>
+          <td><input type="text" placeholder="请输入新用户的名称" name="name" id="name"></td>
         </tr>
         <tr>
           <td>用户年龄：</td>
