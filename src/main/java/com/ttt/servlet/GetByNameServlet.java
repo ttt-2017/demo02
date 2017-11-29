@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Administrator on 2017/11/25.
@@ -22,7 +23,7 @@ public class GetByNameServlet extends javax.servlet.http.HttpServlet{
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charaset=UTF-8");
         String name = request.getParameter("name");
-        ArrayList<User> userList=new UserDAOImpl().getUserByName(name);
+        List<User> userList=new UserDAOImpl().getUserByName(name);
         if(userList.size()>0) {
             for (User user : userList) {
                 response.getWriter().append("查询到的用户信息如下：<br/>").append("id=" + user.getId() + "<br/>").
