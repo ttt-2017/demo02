@@ -22,5 +22,5 @@ public interface UserService {
 
     public User getUserById(int id);
 
-    public List<User> getUserByAge(int age);
+    public List<User> getUserByAge(int age,int age1);
    }

@@ -171,9 +171,11 @@ public class UserDAOImpl implements UserDAO {
             pstmt = (PreparedStatement)connection.prepareStatement(sql);
             pstmt.setInt(1,id);
             rs = pstmt.executeQuery();
-            user.setId(rs.getInt(1));
-            user.setName(rs.getString(2));
-            user.setAge(rs.getInt(3));
+            if(rs.next()){
+                user.setId(rs.getInt(1));
+                user.setName(rs.getString(2));
+                user.setAge(rs.getInt(3));
+            }
             rs.close();
             pstmt.close();
         } catch (SQLException e) {
@@ -183,15 +185,16 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public List<User> getUserByAge(int age) {
+    public List<User> getUserByAge(int age,int age1) {
         List<User> userList=new ArrayList<>();
-        String sql = "select * from user where age = ?";
+        String sql = "select * from user where age BETWEEN ? and ?";
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         User user = new User();
         try {
             pstmt = (PreparedStatement)connection.prepareStatement(sql);
             pstmt.setInt(1,age);
+            pstmt.setInt(2,age1);
             rs = pstmt.executeQuery();
             while(rs.next()){
                 userList.add(new User(rs.getInt(1),rs.getString(2),rs.getInt(3)));

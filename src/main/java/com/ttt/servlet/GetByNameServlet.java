@@ -34,6 +34,7 @@ public class GetByNameServlet extends javax.servlet.http.HttpServlet{
                 out.print("<td>"+user.getId()+"</td>");
                 out.print("<td>"+user.getName()+"</td>");
                 out.print("<td>"+user.getAge()+"</td>");
+                out.print("</tr>");
             }
             out.print("</table>");
         }else{

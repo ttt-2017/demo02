@@ -50,6 +50,6 @@ public class UserServiceImpl implements UserService {
     public User getUserById(int id) { return this.userDAO.getUserById(id); }
 
     @Override
-    public List<User> getUserByAge(int age) { return this.userDAO.getUserByAge(age); }
+    public List<User> getUserByAge(int age,int age1) { return this.userDAO.getUserByAge(age,age1); }
 
 }
