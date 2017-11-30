@@ -8,12 +8,13 @@ import com.ttt.service.UserServiceImpl;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class GetUserByNameTest {
     public static void main(String[] args) throws SQLException {
         UserService userService = new UserServiceImpl(new UserDAOImpl(testConnation.getConf()));
        // User user = userService.getUserByName("Rich");
-        ArrayList<User> user_list=userService.getUserByName("Tom");
+        List<User> user_list=userService.getUserByName("Tom");
         if(user_list.size()>0){
         for(User user:user_list) {
             System.out.println("user : Id\t"+user.getId()+"|\tName" + "\t" + user.getName() + "|\tAge" + user.getAge());

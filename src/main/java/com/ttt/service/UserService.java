@@ -2,7 +2,7 @@ package com.ttt.service;
 
 import com.ttt.model.User;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by fanzhe on 2017/11/23.
@@ -14,9 +14,13 @@ public interface UserService {
 
     public boolean deleteUserById(int id);
 
+    public boolean deleteUserByName(String name);
+
     public boolean updateUser(User user);
 
-    public ArrayList<User> getUserByName(String name);
+    public List<User> getUserByName(String name);
 
-   // public User getUserByName(String name);
-}
+    public User getUserById(int id);
+
+    public List<User> getUserByAge(int age,int age1);
+   }

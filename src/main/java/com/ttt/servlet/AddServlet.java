@@ -18,17 +18,17 @@ public class AddServlet extends javax.servlet.http.HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charaset=UTF-8");
-        String id=request.getParameter("id");
+        //String id=request.getParameter("id");
         String name = request.getParameter("name");
         String age=request.getParameter("age");
         User user=new User();
-        user.setId(Integer.parseInt(id));
+        //user.setId(Integer.parseInt(id));
         user.setName(name);
         user.setAge(Integer.parseInt(age));
         if(new UserDAOImpl().addUser(user)){
             response.getWriter().println("添加记录成功<br/>");
             response.getWriter().println("新用户的信息如下所示：<br/>");
-            response.getWriter().println("id="+id+"<br/>");
+           // response.getWriter().println("id="+id+"<br/>");
             response.getWriter().println("name="+name+"<br/>");
             response.getWriter().println("age="+age+"<br/>");
         }else{

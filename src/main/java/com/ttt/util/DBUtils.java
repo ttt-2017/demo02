@@ -41,9 +41,11 @@ public class DBUtils {
     private static void  init(){
         // 往给定的数据库里面插入测试数据
         User user = null;
-        Connection connection = getConnection();
-        UserDAOImpl userDAO = new UserDAOImpl(connection);
+        Connection connection = null;
+        UserDAOImpl userDAO = null;
         for(int i=0;i<10;i++){
+            connection = getConnection();
+            userDAO = new UserDAOImpl(connection);
             user = new User(i,"zhang"+i,i);
             userDAO.addUser(user);
         }

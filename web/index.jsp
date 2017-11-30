@@ -35,11 +35,20 @@
           </tr>
           <tr>
             <td>
+              <a href="getUserById.jsp" target="_blank">根据用户Id查询用户信息</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="getUserByAge.jsp" target="_blank">根据用户年龄查询用户信息</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
               <a href="updateUser.jsp" target="_blank">更新用户信息</a>
             </td>
           </tr>
         </table>
       </div>
-
   </body>
 </html>
