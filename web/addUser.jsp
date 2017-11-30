@@ -55,6 +55,7 @@
 </head>
 <body>
     <%@include file="title.jsp"%>
+
     <form action="add" method="post" onsubmit="return checkForm()">
       <table align="center">
         <tr>

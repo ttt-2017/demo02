@@ -48,11 +48,9 @@
   <form action="getUserByAge" method="post" onsubmit="return checkForm()">
     <table align="center">
       <tr>
-        <td rowspan="2">用户年龄：</td>
-        <td><input type="text" placeholder="请输入用户的年龄" name="age" id="age"></td>
-      </tr>
-      <tr>
-        <td><input type="text" placeholder="请输入用户的年龄" name="age1" id="age1"></td>
+        <td >用户年龄：</td>
+        <td>从<input type="text" placeholder="请输入用户的年龄" name="age" id="age">&nbsp岁到&nbsp</td>
+        <td><input type="text" placeholder="请输入用户的年龄" name="age1" id="age1">&nbsp岁</td>
       </tr>
       <tr>
         <td colspan="2" align="center"><input type="submit" value="提交"></td>

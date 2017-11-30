@@ -37,10 +37,10 @@
           return false;
         }
       }
-
     </script>
 </head>
     <%@include file="title.jsp"%>
+
     <form action="del" method="post" onsubmit="return checkForm()">
       <table align="center">
         <tr>
