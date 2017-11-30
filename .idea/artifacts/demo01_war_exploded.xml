@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="demo01:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/demo01_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="demo01" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.6" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.0.7" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.0.7" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.21" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="demo01/web/Web" />
+      <element id="dir-copy" path="$PROJECT_DIR$/../../../apache-tomcat-7.0.82-windows-x64/apache-tomcat-7.0.82/webapps" />
+    </root>
+  </artifact>
+</component>
