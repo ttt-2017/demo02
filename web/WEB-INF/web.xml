@@ -43,5 +43,21 @@
         <servlet-name>GetByNameServlet</servlet-name>
         <url-pattern>/getUser</url-pattern>
     </servlet-mapping>
+    <servlet>
+    <servlet-name>GetByIdServlet</servlet-name>
+    <servlet-class>com.ttt.servlet.GetByIdServlet</servlet-class>
+</servlet>
+    <servlet-mapping>
+        <servlet-name>GetByIdServlet</servlet-name>
+        <url-pattern>/getUserById</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GetByAgeServlet</servlet-name>
+        <servlet-class>com.ttt.servlet.GetByAgeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetByAgeServlet</servlet-name>
+        <url-pattern>/getUserByAge</url-pattern>
+    </servlet-mapping>
 
 </web-app>
