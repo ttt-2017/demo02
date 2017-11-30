@@ -44,9 +44,9 @@
         <url-pattern>/getUser</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>GetByIdServlet</servlet-name>
-        <servlet-class>com.ttt.servlet.GetByIdServlet</servlet-class>
-    </servlet>
+    <servlet-name>GetByIdServlet</servlet-name>
+    <servlet-class>com.ttt.servlet.GetByIdServlet</servlet-class>
+</servlet>
     <servlet-mapping>
         <servlet-name>GetByIdServlet</servlet-name>
         <url-pattern>/getUserById</url-pattern>
