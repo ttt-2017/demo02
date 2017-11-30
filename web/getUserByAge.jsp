@@ -44,19 +44,20 @@
   </script>
 </head>
 <body>
-<form action="getUserByAge" method="post" onsubmit="return checkForm()">
-  <table align="center">
-    <tr>
-      <td rowspan="2">用户年龄：</td>
-      <td><input type="text" placeholder="请输入用户的年龄" name="age" id="age"></td>
-    </tr>
-    <tr>
-      <td><input type="text" placeholder="请输入用户的年龄" name="age1" id="age1"></td>
-    </tr>
-    <tr>
-      <td colspan="2" align="center"><input type="submit" value="提交"></td>
-    </tr>
-  </table>
-</form>
+  <%@include file="title.jsp"%>
+  <form action="getUserByAge" method="post" onsubmit="return checkForm()">
+    <table align="center">
+      <tr>
+        <td rowspan="2">用户年龄：</td>
+        <td><input type="text" placeholder="请输入用户的年龄" name="age" id="age"></td>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder="请输入用户的年龄" name="age1" id="age1"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" value="提交"></td>
+      </tr>
+    </table>
+  </form>
 </body>
 </html>

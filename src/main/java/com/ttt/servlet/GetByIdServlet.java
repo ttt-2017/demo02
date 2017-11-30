@@ -17,7 +17,7 @@ public class GetByIdServlet extends javax.servlet.http.HttpServlet{
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-        response.setContentType("text/html;charaset=utf-8");
+        response.setContentType("text/html;charset=utf-8");
         String id=request.getParameter("id");
         User user=new UserDAOImpl().getUserById(Integer.parseInt(id));
         PrintWriter out = response.getWriter();

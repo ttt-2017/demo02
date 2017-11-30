@@ -49,25 +49,26 @@
     </script>
 </head>
 <body>
-<form action="Check" method="post" onsubmit="return checkForm()">
-  <table border="0" cellpadding="10" cellspacing="0" align="center">
-    <tr>
-      <td><label>用户Id：</label></td>
-      <td><input type="text" placeholder="请输入要查询的用户id" name="id" id="id"></td>
-    </tr>
-    <tr>
-      <td><label>用户名称：</label></td>
-      <td><input type="text" placeholder="请输入要查询的用户名" name="name" id="name"/></td>
-    </tr>
-    <tr>
-      <td><label>用户年龄：</label></td>
-      <td><input type="text" placeholder="请输入用户的年龄" name="age" id="age"></td>
-    </tr>
-    <tr>
-      <td colspan="2" align="center"><input type="submit" value="提交"/></td>
-    </tr>
-  </table>
-</form>
+  <%@include file="title.jsp"%>
+  <form action="Check" method="post" onsubmit="return checkForm()">
+    <table border="0" cellpadding="10" cellspacing="0" align="center">
+      <tr>
+        <td><label>用户Id：</label></td>
+        <td><input type="text" placeholder="请输入要查询的用户id" name="id" id="id"></td>
+      </tr>
+      <tr>
+        <td><label>用户名称：</label></td>
+        <td><input type="text" placeholder="请输入要查询的用户名" name="name" id="name"/></td>
+      </tr>
+      <tr>
+        <td><label>用户年龄：</label></td>
+        <td><input type="text" placeholder="请输入用户的年龄" name="age" id="age"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" value="提交"/></td>
+      </tr>
+    </table>
+  </form>
 
 </body>
 </html>

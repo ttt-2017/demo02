@@ -31,16 +31,17 @@
   </script>
 </head>
 <body>
-<form action="getUserById" method="post" onsubmit="return checkForm()">
-  <table align="center">
-    <tr>
-      <td>用户Id：</td>
-      <td><input type="text" placeholder="请输入用户的Id" name="id" id="id"></td>
-    </tr>
-    <tr>
-      <td colspan="2" align="center"><input type="submit" value="提交"></td>
-    </tr>
-  </table>
-</form>
+  <%@include file="title.jsp"%>
+  <form action="getUserById" method="post" onsubmit="return checkForm()">
+    <table align="center">
+      <tr>
+        <td>用户Id：</td>
+        <td><input type="text" placeholder="请输入用户的Id" name="id" id="id"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" value="提交"></td>
+      </tr>
+    </table>
+  </form>
 </body>
 </html>

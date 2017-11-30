@@ -22,7 +22,7 @@ public class GetByNameServlet extends javax.servlet.http.HttpServlet{
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-        response.setContentType("text/html;charaset=UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
         String name = request.getParameter("name");
         PrintWriter out = response.getWriter();
         List<User> userList=new UserDAOImpl().getUserByName(name);

@@ -35,8 +35,26 @@
       return true
     }
   </script>
+ <!-- <style>
+    .title{
+      background-color: black;
+      height: 30px;
+
+    }
+    .title ul li{
+      list-style-type:none ;
+      display: inline;
+    }
+    .title a{
+      font-size: 20px;
+      color:white;
+      text-decoration: none;
+    }
+  </style>-->
+
 </head>
 <body>
+    <%@include file="title.jsp"%>
     <form action="add" method="post" onsubmit="return checkForm()">
       <table align="center">
         <tr>
