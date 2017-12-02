@@ -31,7 +31,6 @@
   </script>
 </head>
 <body>
-  <%@include file="title.jsp"%>
   <form action="getUserById" method="post" onsubmit="return checkForm()">
     <table align="center">
       <tr>

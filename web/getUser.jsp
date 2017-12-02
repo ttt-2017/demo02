@@ -21,8 +21,6 @@
     </script>
 </head>
 <body>
-   <%@include file="title.jsp"%>
-
    <form action="getUser" method="post" onsubmit="return checkForm()">
      <table align="center">
        <tr>

@@ -49,8 +49,6 @@
     </script>
 </head>
 <body>
-  <%@include file="title.jsp"%>
-
   <form action="Check" method="post" onsubmit="return checkForm()">
     <table border="0" cellpadding="10" cellspacing="0" align="center">
       <tr>
