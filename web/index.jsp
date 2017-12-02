@@ -10,45 +10,52 @@
     </style>
   </head>
   <body>
-      <div align="center">
+      <div align="center" style="border: 1px solid #000;height: 20%;width: 100%">
         <h1>
           <b>用户信息操作系统</b>
         </h1>
-        <br/>
-        <table>
+      </div>
+        <div id="left" class="left" style="width: 100%;height: 70%;border: 1px solid #000;float: left">
+        <table width="30%">
           <tr>
-            <td><a href="hasUser.jsp" target="_blank">判断用户是否存在</a></td>
+            <td><a href="hasUser.jsp" target="content">判断用户是否存在</a></td>
           </tr>
           <tr>
             <td>
-              <a href="delUser.jsp" target="_blank">删除用户信息</a>
+              <a href="delUser.jsp" target="content">删除用户信息</a>
             </td>
           </tr>
           <tr>
             <td>
-              <a href="addUser.jsp" target="_blank">添加用户信息</a></tr>
+              <a href="addUser.jsp" target="content">添加用户信息</a></tr>
             </td>
           <tr>
             <td>
-              <a href="getUser.jsp" target="_blank">根据用户名查询用户信息</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="getUserById.jsp" target="_blank">根据用户Id查询用户信息</a>
+              <a href="getUser.jsp" target="content">根据用户名查询用户信息</a>
             </td>
           </tr>
           <tr>
             <td>
-              <a href="getUserByAge.jsp" target="_blank">根据用户年龄查询用户信息</a>
+              <a href="getUserById.jsp" target="content">根据用户Id查询用户信息</a>
             </td>
           </tr>
           <tr>
             <td>
-              <a href="updateUser.jsp" target="_blank">更新用户信息</a>
+              <a href="getUserByAge.jsp" target="content">根据用户年龄查询用户信息</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="updateUser.jsp" target="content">更新用户信息</a>
             </td>
           </tr>
         </table>
-      </div>
+
+          <div id="right" class="right" style="float: right;height: 100%;width: 70%">
+            <iframe width="100%" height="100%" scrolling="yes" name="content" frameborder="1px">
+
+            </iframe>
+          </div>
+        </div>
   </body>
 </html>
