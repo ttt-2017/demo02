@@ -5,9 +5,7 @@ import com.ttt.model.User;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.LinkedHashMap;
 import java.util.Properties;
 
@@ -43,10 +41,32 @@ public class DBUtils {
         User user = null;
         Connection connection = null;
         UserDAOImpl userDAO = null;
-        for(int i=0;i<10;i++){
+        boolean flat = false;
+        try {
             connection = getConnection();
+            ResultSet rs = connection.getMetaData().getTables(null, null, "user", null);
+            if(rs.next()){
+                flat=true;
+            }
+        } catch (SQLException e) {
+            flat=false;
+        }
+        if(!flat){
+            String sql="create table user(id int NOT NULL AUTO_INCREMENT PRIMARY KEY," +
+                    "name varchar(20) NOT NULL,"+
+                    "age int)";
+            try {
+                PreparedStatement pstmt = connection.prepareStatement(sql);
+                pstmt.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        for(int i=0;i<10;i++){
             userDAO = new UserDAOImpl(connection);
-            user = new User(i,"zhang"+i,i);
+            user = new User();
+            user.setName("zhang"+i);
+            user.setAge(i);
             userDAO.addUser(user);
         }
         try {

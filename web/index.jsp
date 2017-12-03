@@ -24,12 +24,12 @@
 </head>
 <body>
     <table width="100%" height="100%">
-        <tr align="center" height="30%">
+        <tr align="center" height="20%">
             <td colspan="2"><h1>用户信息操作系统</h1></td>
         </tr>
         <tr height="70%">
-            <td><iframe src="left.jsp" scrolling="no" hspace="-100" vspace="-100" width="100%" height="100%"></iframe></td>
-            <td><iframe name="mainFrame" scrolling="no" hspace="-100" vspace="-100" width="100%" height="100%"></iframe></td>
+            <td width="30%"><iframe src="left.jsp" scrolling="no" hspace="-100" vspace="-100" width="100%" height="100%"></iframe></td>
+            <td width="70%"><iframe name="mainFrame" scrolling="no" hspace="-100" vspace="-100" width="100%" height="100%"></iframe></td>
         </tr>
     </table>
 </body>
